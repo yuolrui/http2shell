@@ -22,7 +22,7 @@ func main() {
 		shellFile := "cmd/" + shell + ".sh"
 		out, err := exec.Command("bash", shellFile).Output()
 		if err != nil {
-			fmt.Println("执行命令出错：", err)
+			fmt.Println("error: ", err)
 			c.JSON(400, gin.H{
 				"message": err.Error(),
 			})
